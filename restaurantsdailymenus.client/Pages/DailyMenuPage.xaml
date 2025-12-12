@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="restaurantsdailymenus.client.Pages.DailyMenuPage"
+Title="Daily Menu">
+
+
+    <CollectionView ItemsSource="{Binding Menus}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="10" Margin="5" BorderColor="DarkGray">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Date}" FontAttributes="Bold" />
+                        <Label Text="{Binding Item1}" />
+                        <Label Text="Price: {Binding Price1}" />
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+
+    <Button Text="Add Menu" Command="{Binding AddMenuCommand}" />
+</ContentPage>
