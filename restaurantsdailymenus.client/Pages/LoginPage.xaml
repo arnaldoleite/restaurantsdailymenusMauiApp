@@ -1,12 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="restaurantsdailymenus.client.Pages.LoginPage"
-Title="Login">
-
-
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:notes="clr-namespace:restaurantsdailymenus.client.Resources.Shared"
+             xmlns:localization="clr-namespace:restaurantsdailymenus.client.Resources.Localization"
+             x:Class="restaurantsdailymenus.client.Pages.LoginPage"
+             Title="{x:Static localization:AppResources.login}">
     <VerticalStackLayout Padding="20" Spacing="15">
-        <Entry Placeholder="Username" Text="{Binding Username}" />
-        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
-        <Button Text="Login" Command="{Binding LoginCommand}" />
+        <Label 
+            Text="{OnPlatform iOS='iOS', Android='Android', WinUI='WinUI'}" 
+            HorizontalTextAlignment="Center" 
+            TextColor="{x:Static Member=notes:SharedResources.FontColor}"/>
+        <Entry Placeholder="{x:Static localization:AppResources.login}" Text="{Binding Username}" />
+        <Entry Placeholder="{x:Static localization:AppResources.password}" Text="{Binding Password}" IsPassword="True" />
+        <Button Text="{x:Static localization:AppResources.login}" Command="{Binding LoginCommand}" />
+        <Button Text="{x:Static localization:AppResources.creat_account}"  Command="{Binding GoToRegisterCommand}" />
+        <HorizontalStackLayout
+            HorizontalOptions="End"
+            Spacing="12">
+
+                    <Button
+                Text="🇵🇹"
+                Command="{Binding ChangeLanguageCommand}"
+                CommandParameter="pt-PT"
+                FontSize="18" />
+
+                    <Button
+                Text="🇬🇧"
+                Command="{Binding ChangeLanguageCommand}"
+                CommandParameter="en-US"
+                FontSize="18" />
+
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

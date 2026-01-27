@@ -3,12 +3,22 @@
     x:Class="restaurantsdailymenus.client.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:restaurantsdailymenus.client"
-    Title="restaurantsdailymenus.client">
+    xmlns:pages="clr-namespace:restaurantsdailymenus.client.Pages"
+    Shell.FlyoutBehavior="Disabled">
 
+
+    <!-- LOGIN (start page) -->
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="login"
+        ContentTemplate="{DataTemplate pages:LoginPage}" />
+
+
+    <!-- MAIN TAB -->
+    <TabBar Route="main">
+        <ShellContent
+            Route="restaurants"
+            Title="Restaurants"
+            ContentTemplate="{DataTemplate pages:RestaurantsPage}" />
+    </TabBar>
 
 </Shell>

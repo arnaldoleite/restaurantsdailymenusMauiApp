@@ -15,6 +15,8 @@ More information: https://aka.ms/maui-privacy-manifest
         <dict>
             <key>NSPrivacyAccessedAPIType</key>
             <string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+			<key>NSLocationWhenInUseUsageDescription</key>
+			<string>We need your location to obtain GPS coordinates.</string>
             <key>NSPrivacyAccessedAPITypeReasons</key>
             <array>
                 <string>C617.1</string>

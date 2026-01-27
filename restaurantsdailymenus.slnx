@@ -1,4 +1,6 @@
 <Solution>
-  <Project Path="restaurantsdailymenus.client/restaurantsdailymenus.client.csproj" Id="05964dad-308e-4152-a488-6c495b369d5f" DisplayName="RestaurantsDailyMenus.Client" />
+  <Project Path="restaurantsdailymenus.client/restaurantsdailymenus.client.csproj" Id="05964dad-308e-4152-a488-6c495b369d5f">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="restaurantsdailymenus/restaurantsdailymenus.csproj" />
 </Solution>

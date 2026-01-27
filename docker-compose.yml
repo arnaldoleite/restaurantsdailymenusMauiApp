@@ -1,0 +1,6 @@
+services:
+  restaurantsdailymenus:
+    image: ${DOCKER_REGISTRY-}restaurantsdailymenus
+    build:
+      context: .
+      dockerfile: restaurantsdailymenus/Dockerfile

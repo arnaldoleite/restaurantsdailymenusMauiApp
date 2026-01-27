@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using restaurantsdailymenus.client.Models;
 
-namespace restaurantsdailymenus.client.Pages
+namespace restaurantsdailymenus.client.Pages;
+
+public partial class DailyMenuPage : ContentPage
 {
-    public partial class DailyMenuPage : ContentPage
+    public DailyMenuPage(DailyMenuViewModel vm)
     {
-        public DailyMenuPage(DailyMenuViewModel vm)
-        {
-            InitializeComponent();
-            BindingContext = vm;
-        }
+        InitializeComponent();
+        BindingContext = vm;
     }
 }

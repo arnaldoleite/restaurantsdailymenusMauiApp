@@ -5,6 +5,8 @@
              x:Class="restaurantsdailymenus.client.App">
     <Application.Resources>
         <ResourceDictionary>
+            <x:Static x:Key="Language_Strings"
+                Member="local:App.Language_Strings" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

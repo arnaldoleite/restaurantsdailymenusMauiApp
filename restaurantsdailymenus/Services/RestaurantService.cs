@@ -35,6 +35,21 @@ public class RestaurantService
 
         // Normalize same way you store/query (case-insensitive by name)
         var filter = Builders<Restaurant>.Filter.Eq(r => r.Name, name);
+
         return await _restaurants.Find(filter).FirstOrDefaultAsync();
     }
+
+    public async Task<Restaurant?> GetByNameAsync(string id,string name)
+    {
+        if (string.IsNullOrWhiteSpace(name)) return null;
+
+        // Normalize same way you store/query (case-insensitive by name)
+        var filter = Builders<Restaurant>.Filter.And(
+            Builders<Restaurant>.Filter.Eq(r => r.Name, name),
+            Builders<Restaurant>.Filter.Ne(r => r.Id, id));
+
+
+        return await _restaurants.Find(filter).FirstOrDefaultAsync();
+    }
+
 }

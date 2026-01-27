@@ -2,9 +2,9 @@ using restaurantsdailymenus.client.Models;
 
 namespace restaurantsdailymenus.client.Pages;
 
-public partial class RestaurantDetailsPage : ContentPage
+public partial class RestaurantPage : ContentPage
 {
-    public RestaurantDetailsPage(RestaurantDetailsViewModel vm)
+    public RestaurantPage(RestaurantViewModel vm)
     {
         InitializeComponent();
         BindingContext = vm;

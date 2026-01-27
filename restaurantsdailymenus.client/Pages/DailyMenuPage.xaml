@@ -1,23 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="restaurantsdailymenus.client.Pages.DailyMenuPage"
-Title="Daily Menu">
+Title="Daily Menu Form">
 
 
-    <CollectionView ItemsSource="{Binding Menus}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame Padding="10" Margin="5" BorderColor="DarkGray">
-                    <VerticalStackLayout>
-                        <Label Text="{Binding Date}" FontAttributes="Bold" />
-                        <Label Text="{Binding Item1}" />
-                        <Label Text="Price: {Binding Price1}" />
-                    </VerticalStackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
 
 
-    <Button Text="Add Menu" Command="{Binding AddMenuCommand}" />
+            <DatePicker Date="{Binding Menu.Date}" />
+
+
+            <Entry Placeholder="Item 1" Text="{Binding Menu.Item1}" />
+            <Entry Placeholder="Price 1" Keyboard="Numeric" Text="{Binding Menu.Price1}" />
+
+
+            <Entry Placeholder="Item 2" Text="{Binding Menu.Item2}" />
+            <Entry Placeholder="Price 2" Keyboard="Numeric" Text="{Binding Menu.Price2}" />
+
+
+            <Entry Placeholder="Item 3" Text="{Binding Menu.Item3}" />
+            <Entry Placeholder="Price 3" Keyboard="Numeric" Text="{Binding Menu.Price3}" />
+
+
+            <Entry Placeholder="Notes" Text="{Binding Menu.Notes}" />
+
+
+            <Button Text="Save" Command="{Binding SaveCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

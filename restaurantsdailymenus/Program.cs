@@ -11,6 +11,12 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Kestrel configuration for docker
+/*builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080);
+});
+*/
 // Mongo + Dependency Injection
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<JwtTokenGenerator>();

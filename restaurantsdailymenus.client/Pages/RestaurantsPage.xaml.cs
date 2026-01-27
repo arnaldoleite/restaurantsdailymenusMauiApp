@@ -1,16 +1,20 @@
-﻿using restaurantsdailymenus.client.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using restaurantsdailymenus.client.Models;
 
-namespace restaurantsdailymenus.client.Pages
+namespace restaurantsdailymenus.client.Pages;
+
+public partial class RestaurantsPage : ContentPage
 {
-    public partial class RestaurantsPage : ContentPage
+    public RestaurantsPage(RestaurantsViewModel vm)
     {
-        public RestaurantsPage(RestaurantsViewModel vm)
-        {
-            InitializeComponent();
-            BindingContext = vm;
-        }
+        InitializeComponent();
+        BindingContext = vm;
+    }
+
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is RestaurantsViewModel vm)
+            await vm.LoadAsync();
     }
 }

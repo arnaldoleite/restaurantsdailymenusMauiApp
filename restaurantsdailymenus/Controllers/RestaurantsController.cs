@@ -73,7 +73,7 @@ public class RestaurantsController : ControllerBase
         var incomingName = restaurant.Name.Trim();
 
         // Check for duplicate by name using a targeted query
-        var existingByName = await _restaurants.GetByNameAsync(incomingName);
+        var existingByName = await _restaurants.GetByNameAsync(id,incomingName);
         if (existingByName != null)
             return Conflict("A restaurant with the same name already exists.");
 

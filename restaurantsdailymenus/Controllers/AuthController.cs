@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BCrypt.Net;
+using Microsoft.AspNetCore.Mvc;
+using restaurantsdailymenus.Helpers;
 using restaurantsdailymenus.Models;
 using restaurantsdailymenus.Services;
-using restaurantsdailymenus.Helpers;
-using BCrypt.Net;
+using YamlDotNet.Core.Tokens;
 
 namespace restaurantsdailymenus.Controllers;
 
@@ -26,9 +27,10 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterDto dto)
     {
+        var msg = "User already exists";
         var existing = await _userService.GetByUsernameAsync(dto.Username);
         if (existing != null)
-            return BadRequest("User already exists");
+            return BadRequest(new { msg });
 
         var user = new User
         {
@@ -37,7 +39,8 @@ public class AuthController : ControllerBase
         };
 
         await _userService.CreateAsync(user);
-        return Ok("User created");
+        msg = "User created";
+        return Ok(new { msg });
     }
 
     [HttpPost("login")]
