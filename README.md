@@ -130,6 +130,9 @@ Users can retrieve their current GPS location with a single tap:
   <li>Run</li>
 </ul>
 <h1>👤 Author</h1>
-<ul>
+
 Arnaldo
-</ul>
+<dl>
+  <dt>📍 Portugal</dt>
+  <dt>💼 Project developed for learning and demonstrating development with MAUI + .NET API</dt>
+</dl>
