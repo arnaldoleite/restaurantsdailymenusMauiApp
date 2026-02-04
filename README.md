@@ -132,5 +132,4 @@ Users can retrieve their current GPS location with a single tap:
 <h1>👤 Author</h1>
 <ul>
 Arnaldo
-.NET Developer | Mobile & Backend
 </ul>
