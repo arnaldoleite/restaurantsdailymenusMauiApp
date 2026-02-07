@@ -136,3 +136,19 @@ Arnaldo
   <dt>📍 Portugal</dt>
   <dt>💼 Project developed for learning and demonstrating development with MAUI + .NET API</dt>
 </dl>
+
+
+<h1>✨ Example images</h1>
+<img width="1910" height="1016" alt="vstudio_ex1" src="https://github.com/user-attachments/assets/dc513eae-228b-4505-9169-9312469715d9" />
+
+<img width="1901" height="1015" alt="vstudio_ex2" src="https://github.com/user-attachments/assets/99a27516-b9b8-4823-a9e4-db45e334de9a" />
+
+<img width="1902" height="1021" alt="vstudio_ex3" src="https://github.com/user-attachments/assets/12d05f28-4b65-4ec8-8ab9-569295c9b976" />
+
+<img width="1100" height="513" alt="API_ex1" src="https://github.com/user-attachments/assets/34a0fcf1-e838-42de-a103-c77aeedfde99" />
+
+<img width="1823" height="897" alt="MongoDB_ex1" src="https://github.com/user-attachments/assets/f88f4595-fead-4251-8b99-4e8cfd155eee" />
+
+<img width="1845" height="907" alt="MongoDB_ex2" src="https://github.com/user-attachments/assets/4a452103-8404-4900-9666-b44e7d14daf8" />
+
+
