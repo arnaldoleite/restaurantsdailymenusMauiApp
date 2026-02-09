@@ -35,6 +35,31 @@ This project is being developed as a real-world portfolio project, showcasing mo
 
   <li>JWT-based authentication</li>
 </ul>
+
+<h2>🔐 Security Features</h2>
+<ul>
+  <li>HTTPS-only communication (SSL/TLS)</li>
+  <li>HTTP Strict Transport Security (HSTS) in production</li>
+  <li>JWT Bearer authentication tokens</li>
+  <li>Rate limiting (IP-based and user-based)</li>
+  <li>Secure HTTP headers</li>
+  <li>Secrets stored outside source control</li>
+</ul>
+
+<h2>🚦 Rate Limiting Strategy</h2>
+<ul>
+  <li>Public endpoints (login, refresh): IP-based rate limiting</li>
+  <li>Authenticated endpoints: user-based rate limiting</li>
+  <li>HTTP 429 returned when limits are exceeded</li>
+</ul>
+
+<h2>🛠️ Environment Configuration</h2>
+<ul>
+  <li>Swagger enabled only in development</li>
+  <li>HSTS enabled only in production</li>
+  <li>Environment-specific configuration files</li>
+</ul>
+
 <h1>🧱 Architecture Overview</h1>
 <ul>
 MAUI App
