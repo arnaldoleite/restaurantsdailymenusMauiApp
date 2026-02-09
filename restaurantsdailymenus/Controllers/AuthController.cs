@@ -1,5 +1,6 @@
 ﻿using BCrypt.Net;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using restaurantsdailymenus.Helpers;
 using restaurantsdailymenus.Models;
 using restaurantsdailymenus.Services;
@@ -8,6 +9,7 @@ using YamlDotNet.Core.Tokens;
 namespace restaurantsdailymenus.Controllers;
 
 [ApiController]
+[EnableRateLimiting("ip-policy")]
 [Route("api/v{version:apiVersion}/[controller]")]
 [ApiVersion("1.0")]
 public class AuthController : ControllerBase

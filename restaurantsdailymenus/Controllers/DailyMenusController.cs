@@ -1,12 +1,14 @@
 ﻿
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using restaurantsdailymenus.Models;
 using restaurantsdailymenus.Services;
 
 namespace restaurantsdailymenus.Controllers;
 
 [ApiController]
+[EnableRateLimiting("user-policy")]
 [Route("api/restaurants/{restaurantId}/menus")]
 public class DailyMenusController : ControllerBase
 {
